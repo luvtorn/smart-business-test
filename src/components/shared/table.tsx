@@ -1,17 +1,10 @@
 import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { useGetUsersQuery } from "../../services/users";
-import { useDispatch, useSelector } from "react-redux";
-import { filterUsers, setUsers } from "../../redux/usersSlice";
+import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import TableHead from "./tableHead";
 import { useActions } from "../../hooks/useActions";
-
-const usersColumns = [
-  { id: 0, name: "Name", type: "name" },
-  { id: 1, name: "Username", type: "username" },
-  { id: 2, name: "Email", type: "email" },
-  { id: 3, name: "Phone", type: "phone" },
-];
+import TableBody from "./tableBody";
 
 function Table() {
   const { data: users, isLoading } = useGetUsersQuery();
@@ -33,29 +26,19 @@ function Table() {
   };
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen">
+    <div className="p-6 bg-gray-700 min-h-screen overflow-x-auto">
       {isLoading ? (
-        <p className="text-blue-500 text-xl text-center">Loading...</p>
+        <p className="text-purple-500 text-3xl font-bold text-center">
+          Loading...
+        </p>
       ) : (
-        <table className="w-full bg-white border border-gray-300 rounded-lg shadow-md mt-4">
+        <table className="w-1/2 mx-auto table-auto bg-white shadow-xl rounded-lg overflow-hidden">
           <TableHead
             filters={filters}
             onChange={(e) => handleFilterChange(e)}
           />
 
-          <tbody>
-            {filteredUsers?.map((user) => (
-              <tr
-                key={user.id}
-                className="border-t text-center hover:bg-gray-100"
-              >
-                <td className="py-3 px-4">{user.name}</td>
-                <td className="py-3 px-4">{user.username}</td>
-                <td className="py-3 px-4">{user.email}</td>
-                <td className="py-3 px-4">{user.phone}</td>
-              </tr>
-            ))}
-          </tbody>
+          <TableBody filteredUsers={filteredUsers} />
         </table>
       )}
     </div>

@@ -1,12 +1,6 @@
 import React from "react";
 import Input from "../ui/input";
-
-const usersColumns = [
-  { id: 0, name: "Name", type: "name" },
-  { id: 1, name: "Username", type: "username" },
-  { id: 2, name: "Email", type: "email" },
-  { id: 3, name: "Phone", type: "phone" },
-];
+import { usersColumns } from "../../constants/constants";
 
 interface TableHeadProps {
   filters: { [key: string]: string };
@@ -15,11 +9,15 @@ interface TableHeadProps {
 
 const TableHead: React.FC<TableHeadProps> = ({ filters, onChange }) => {
   return (
-    <thead className="bg-black/50 text-white">
+    <thead className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
       <tr>
         {usersColumns.map((column) => (
-          <th className="py-3 px-4" key={column.id}>
+          <th
+            className="py-3 px-4 text-xs sm:text-sm md:text-base lg:text-lg"
+            key={column.id}
+          >
             <Input
+              placeholder={column.name}
               name={column.name.toLowerCase()}
               value={filters[column.type]}
               onChange={(e) => onChange(e)}
