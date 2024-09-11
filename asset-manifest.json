@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/smart-business-test/static/css/main.089e04c5.css",
-    "main.js": "/smart-business-test/static/js/main.314491bb.js",
+    "main.css": "/smart-business-test/static/css/main.b9f985bc.css",
+    "main.js": "/smart-business-test/static/js/main.bc854a2b.js",
     "index.html": "/smart-business-test/index.html",
-    "main.089e04c5.css.map": "/smart-business-test/static/css/main.089e04c5.css.map",
-    "main.314491bb.js.map": "/smart-business-test/static/js/main.314491bb.js.map"
+    "main.b9f985bc.css.map": "/smart-business-test/static/css/main.b9f985bc.css.map",
+    "main.bc854a2b.js.map": "/smart-business-test/static/js/main.bc854a2b.js.map"
   },
   "entrypoints": [
-    "static/css/main.089e04c5.css",
-    "static/js/main.314491bb.js"
+    "static/css/main.b9f985bc.css",
+    "static/js/main.bc854a2b.js"
   ]
 }
