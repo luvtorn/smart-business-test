@@ -1,46 +1,82 @@
-# Getting Started with Create React App
+# ⚛️ React Redux Table with Tailwind & TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a modern web application built with **React**, **Redux**, **RTK Query**, **Tailwind CSS**, and **TypeScript**. It provides a clean and responsive table component with search functionality in the headers. The project follows best practices in structuring and organizing components, state management, and styling, making it both scalable and easy to maintain.
 
-## Available Scripts
+## 🛠️ Technologies Used
 
-In the project directory, you can run:
+- **React**: Created using `create-react-app`, a fast way to set up modern React applications.
+- **Redux**: State management is handled with Redux and the powerful Redux Toolkit, making state handling efficient and simple.
+- **RTK Query**: Used for data fetching and server-side state management.
+- **Tailwind CSS**: For clean, responsive, and utility-first styling of the UI components.
+- **TypeScript**: Provides static type-checking to ensure code quality and reliability.
 
-### `npm run dev`
+### Key Components:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **`table.tsx`**: This is the core table component that brings everything together. It renders the table along with its headers and body.
+- **`tableHead.tsx`**: The table header component which includes input fields for filtering/searching across different columns.
+- **`tableBody.tsx`**: Displays the actual data rows fetched from the API.
+- **`input.tsx`**: A reusable input field component, styled using Tailwind CSS.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### State Management:
 
-### `npm test`
+- **`store.ts`**: The main Redux store configuration where slices and middleware like RTK Query are included.
+- **`usersSlice.ts`**: Handles the state for user-related data, including fetching, loading states, and error handling.
+- **`rootActions.ts`**: Combines actions for easy dispatch within components.
+- **`useActions.ts`**: A custom hook to simplify dispatching actions from Redux.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ### API Integration:
 
-### `npm run build`
+- **`users.ts`**: This file is responsible for fetching user data from an API using RTK Query. It handles both fetching and caching the data, making requests efficient and fast.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ensure that you have **Node.js** installed. You can install Node.js from [here](https://nodejs.org/).
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/smart-business-test.git
+   
+2. Navigate to the project directory:
+   
+   ```bash
+    cd smart-business-test
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Install the required dependencies:
+   
+   ```bash
+    cd smart-business-test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. Start the development server:
+   
+   ```bash
+   npm run dev
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The app will be available at http://localhost:3000.
 
-## Learn More
+### Build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. To build the app for production, run:
+   
+   ```bash
+   npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will create an optimized production build in the build/ directory.
+
+## ✨ Features
+
+- Searchable Table: Each column in the table header has a search input to filter data efficiently.
+- State Management: The app uses Redux for central state management, making it easy to manage complex state logic.
+- Type Safety: Thanks to TypeScript, the entire codebase is type-safe, reducing the likelihood of bugs and making development more reliable.
+- Tailwind CSS: Modern utility-first CSS for fast and beautiful styling.
+
+## 📧 Contact
+
+If you have any questions or feedback, feel free to reach out via:
+
+- Email: kolyangermanenko@gmail.com
+- GitHub: [luvtorn](https://github.com/luvtorn)
+
