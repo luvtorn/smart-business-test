@@ -57,6 +57,9 @@ Ensure that you have **Node.js** installed. You can install Node.js from [here](
 
 The app will be available at http://localhost:3000.
 
+Also you can view the live project at:
+https://luvtorn.github.io/smart-business-test/.
+
 ### Build
 
 1. To build the app for production, run:
