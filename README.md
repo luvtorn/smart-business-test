@@ -48,7 +48,7 @@ Ensure that you have **Node.js** installed. You can install Node.js from [here](
 4. Install the required dependencies:
    
    ```bash
-    cd smart-business-test
+    npm install
 
 6. Start the development server:
    
